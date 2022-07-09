@@ -4,6 +4,11 @@ import "./App.css";
 import { NavLink, Route, Routes } from "react-router-dom";
 import styled from "@emotion/styled";
 import ErrorBoundary from "components/ErrorBoundary";
+import Home from "pages/home";
+import About from "pages/about";
+import Blogs from "pages/blogs";
+import Gallery from "pages/gallery";
+import Contact from "pages/contact";
 
 const AppWrapper = styled.div`
   display: flex;
@@ -60,7 +65,13 @@ function App() {
 
       <BodyWrapper>
         <Suspense fallback={null}>
-          <Routes></Routes>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/blogs" element={<Blogs />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
         </Suspense>
       </BodyWrapper>
     </ErrorBoundary>
