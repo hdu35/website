@@ -61,19 +61,19 @@ function App() {
             </nav>
           </div>
         </HeaderWrapper>
-      </AppWrapper>
 
-      <BodyWrapper>
-        <Suspense fallback={null}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/blogs" element={<Blogs />} />
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </Suspense>
-      </BodyWrapper>
+        <BodyWrapper>
+          <Suspense fallback={null}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/blogs" element={<Blogs />} />
+              <Route path="/gallery" element={<Gallery />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </Suspense>
+        </BodyWrapper>
+      </AppWrapper>
     </ErrorBoundary>
   );
 }
